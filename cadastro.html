@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+    <style>
+        .etapa {
+            display: none;
+        }
+        .ativa {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="subtitulo">Ferramentas</h1>
+        <div class="header-container">
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="cadastro.html">Cadastro</a>
+                <a href="login.html">Login</a>
+            </nav>
+            <a href="carrinho.html">
+                <img src="img/carrinho-compras.png" alt="Carrinho de Compras" class="carrinho">
+            </a>
+        </div>
+    </header>
+
+    <section id="cadastrar" style="text-align: center;">
+        <h1>Cadastrar</h1>
+        
+        <div id="etapa1" class="etapa ativa">
+            <form>
+                <div class="form-group">
+                    <label for="Email">E-mail:</label>
+                    <input type="email" id="Email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="Senha">Senha:</label>
+                    <input type="password" id="Senha" name="Senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="c-Senha">Confirma Senha:</label>
+                    <input type="password" id="c-Senha" name="c-Senha" required>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="mostrarEtapaProxima(2)">Próxima Etapa</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div id="etapa2" class="etapa">
+            <form>
+                <div class="form-group">
+                    <label for="Nome">Nome Completo:</label>
+                    <input type="text" id="Nome" name="Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="CPF">CPF:</label>
+                    <input type="text" id="CPF" name="CPF" required>
+                </div>
+                <div class="form-group">
+                    <label for="DataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="DataNascimento" name="DataNascimento" required>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="mostrarEtapaProxima(3)">Próxima Etapa</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <div id="etapa3" class="etapa">
+            <form>
+                <div class="form-group">
+                    <label for="Endereco">Endereço Completo:</label>
+                    <input type="text" id="Endereco" name="Endereco" required>
+                </div>
+                <div class="form-group">
+                    <label for="CEP">CEP:</label>
+                    <input type="text" id="CEP" name="CEP" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Finalizar Cadastro</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; Trabalho HTML/CSS/JS/PHP e Banco de Dados.</p>
+
+    </footer>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
